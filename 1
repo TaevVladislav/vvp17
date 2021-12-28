@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(int n, int k, int l) {
+	int r = 0; int c = 0;
+	cout << "Enter N - ";
+	cin >> n;
+	cout << "Enter K - ";
+	cin >> k;
+	cout << "Enter L - ";
+	cin >> l;
+	int a[100] = {};
+	for (int i = 0; i < n; i++) {
+		a[i] = 2 * (i * i);
+		cout << a[i] << endl;
+	}
+	for (int j = k; j <= l; j++) {
+		r += a[j - 1];
+		c += 1;
+	}
+	float z = r / c;
+	cout << "Result = " << z;
+}
